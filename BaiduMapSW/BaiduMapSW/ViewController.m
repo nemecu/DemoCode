@@ -49,11 +49,12 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
     mapView.delegate = self;
     BMKCoordinateRegion region;
     region.center = locationCoordinate;
-    region.span = BMKCoordinateSpanMake(1, 1);
+    region.span = BMKCoordinateSpanMake(0.1, 0.1);
     [mapView setRegion:region animated:YES];
     [mapView setShowsUserLocation:YES];
     [mapView setZoomLevel:16];
     [self.view insertSubview:mapView belowSubview:self.myScrollView];
+    [mapView setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight];
 
     self.myScrollView.frame = CGRectMake(0, 40, 320, 420);
     [self.myScrollView setClipsToBounds:NO];
@@ -278,7 +279,8 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
     
     [UIView animateWithDuration:0.3f animations:^{
 //        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-        self.myScrollView.center = showPoint;
+        self.myScrollView.center = CGPointMake(self.myScrollView.center.x,
+                                               self.view.frame.size.height/2);
 //        NSLog(@"sw-2- show%f,%f\n",self.view.center.y,self.view.frame.size.height);
 
     }];
@@ -290,7 +292,8 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
     
     [UIView animateWithDuration:0.3f animations:^{
         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-        self.myScrollView.center = hidePoint;
+        self.myScrollView.center = CGPointMake(self.myScrollView.center.x,
+                                               self.view.frame.size.height +self.myScrollView.frame.size.height);
 //        NSLog(@"sw-2-hide %f\n",self.view.center.y);
     }];
 }
@@ -530,6 +533,10 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
         region.span = BMKCoordinateSpanMake(1, 1);
         [mapView setRegion:region animated:YES];
         [mapView setZoomLevel:16];
+        
+        mapView.showsUserLocation = NO;
+        
+//        [mapView setCenterCoordinate:userLocation.location.coordinate animated:YES];
         
     }
 }
