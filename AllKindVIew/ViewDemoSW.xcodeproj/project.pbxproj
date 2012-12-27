@@ -23,10 +23,13 @@
 		7F3925F916893DD2006AF06C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3925D416893DD1006AF06C /* Foundation.framework */; };
 		7F39260116893DD2006AF06C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F3925FF16893DD2006AF06C /* InfoPlist.strings */; };
 		7F39260416893DD2006AF06C /* ViewDemoSWTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F39260316893DD2006AF06C /* ViewDemoSWTests.m */; };
-		7F39261316893E6C006AF06C /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F39261016893E6C006AF06C /* ProgressView.m */; };
-		7F39261416893E6C006AF06C /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F39261216893E6C006AF06C /* GradientView.m */; };
-		7F39261516893F38006AF06C /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F39261016893E6C006AF06C /* ProgressView.m */; };
-		7F39261616893F3A006AF06C /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F39261216893E6C006AF06C /* GradientView.m */; };
+		7FB8C33B168C3B3000344625 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8C338168C3B3000344625 /* GradientView.m */; };
+		7FB8C33C168C3B3000344625 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8C33A168C3B3000344625 /* ProgressView.m */; };
+		7FB8C340168C3B5200344625 /* ProgressGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8C33E168C3B5200344625 /* ProgressGradientViewController.m */; };
+		7FB8C341168C3B5200344625 /* ProgressGradientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8C33F168C3B5200344625 /* ProgressGradientViewController.xib */; };
+		7FB8C345168C3BBE00344625 /* ImageExpandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8C343168C3BBE00344625 /* ImageExpandViewController.m */; };
+		7FB8C346168C3BBE00344625 /* ImageExpandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8C344168C3BBE00344625 /* ImageExpandViewController.xib */; };
+		7FB8C34A168C42A700344625 /* 转发_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8C349168C42A700344625 /* 转发_bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,10 +65,17 @@
 		7F39260016893DD2006AF06C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7F39260216893DD2006AF06C /* ViewDemoSWTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewDemoSWTests.h; sourceTree = "<group>"; };
 		7F39260316893DD2006AF06C /* ViewDemoSWTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewDemoSWTests.m; sourceTree = "<group>"; };
-		7F39260F16893E6C006AF06C /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
-		7F39261016893E6C006AF06C /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
-		7F39261116893E6C006AF06C /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
-		7F39261216893E6C006AF06C /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		7FB8C337168C3B3000344625 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		7FB8C338168C3B3000344625 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		7FB8C339168C3B3000344625 /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		7FB8C33A168C3B3000344625 /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
+		7FB8C33D168C3B5200344625 /* ProgressGradientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressGradientViewController.h; sourceTree = "<group>"; };
+		7FB8C33E168C3B5200344625 /* ProgressGradientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressGradientViewController.m; sourceTree = "<group>"; };
+		7FB8C33F168C3B5200344625 /* ProgressGradientViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressGradientViewController.xib; sourceTree = "<group>"; };
+		7FB8C342168C3BBE00344625 /* ImageExpandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageExpandViewController.h; sourceTree = "<group>"; };
+		7FB8C343168C3BBE00344625 /* ImageExpandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageExpandViewController.m; sourceTree = "<group>"; };
+		7FB8C344168C3BBE00344625 /* ImageExpandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageExpandViewController.xib; sourceTree = "<group>"; };
+		7FB8C349168C42A700344625 /* 转发_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "转发_bg.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +105,7 @@
 		7F3925C316893DD1006AF06C = {
 			isa = PBXGroup;
 			children = (
+				7FB8C348168C429B00344625 /* Res */,
 				7F39260E16893E44006AF06C /* AllView */,
 				7F3925D816893DD1006AF06C /* ViewDemoSW */,
 				7F3925FC16893DD2006AF06C /* ViewDemoSWTests */,
@@ -172,13 +183,43 @@
 		7F39260E16893E44006AF06C /* AllView */ = {
 			isa = PBXGroup;
 			children = (
-				7F39260F16893E6C006AF06C /* ProgressView.h */,
-				7F39261016893E6C006AF06C /* ProgressView.m */,
-				7F39261116893E6C006AF06C /* GradientView.h */,
-				7F39261216893E6C006AF06C /* GradientView.m */,
+				7FB8C335168C3B3000344625 /* ImageViewExpand */,
+				7FB8C336168C3B3000344625 /* ProgressGradient */,
 			);
 			name = AllView;
 			path = ViewDemoSW/AllView;
+			sourceTree = "<group>";
+		};
+		7FB8C335168C3B3000344625 /* ImageViewExpand */ = {
+			isa = PBXGroup;
+			children = (
+				7FB8C342168C3BBE00344625 /* ImageExpandViewController.h */,
+				7FB8C343168C3BBE00344625 /* ImageExpandViewController.m */,
+				7FB8C344168C3BBE00344625 /* ImageExpandViewController.xib */,
+			);
+			path = ImageViewExpand;
+			sourceTree = "<group>";
+		};
+		7FB8C336168C3B3000344625 /* ProgressGradient */ = {
+			isa = PBXGroup;
+			children = (
+				7FB8C337168C3B3000344625 /* GradientView.h */,
+				7FB8C338168C3B3000344625 /* GradientView.m */,
+				7FB8C339168C3B3000344625 /* ProgressView.h */,
+				7FB8C33A168C3B3000344625 /* ProgressView.m */,
+				7FB8C33D168C3B5200344625 /* ProgressGradientViewController.h */,
+				7FB8C33E168C3B5200344625 /* ProgressGradientViewController.m */,
+				7FB8C33F168C3B5200344625 /* ProgressGradientViewController.xib */,
+			);
+			path = ProgressGradient;
+			sourceTree = "<group>";
+		};
+		7FB8C348168C429B00344625 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				7FB8C349168C42A700344625 /* 转发_bg.png */,
+			);
+			path = Res;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +298,9 @@
 				7F3925E716893DD1006AF06C /* Default@2x.png in Resources */,
 				7F3925E916893DD1006AF06C /* Default-568h@2x.png in Resources */,
 				7F3925EF16893DD1006AF06C /* ViewController.xib in Resources */,
+				7FB8C341168C3B5200344625 /* ProgressGradientViewController.xib in Resources */,
+				7FB8C346168C3BBE00344625 /* ImageExpandViewController.xib in Resources */,
+				7FB8C34A168C42A700344625 /* 转发_bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,8 +338,10 @@
 				7F3925DF16893DD1006AF06C /* main.m in Sources */,
 				7F3925E316893DD1006AF06C /* AppDelegate.m in Sources */,
 				7F3925EC16893DD1006AF06C /* ViewController.m in Sources */,
-				7F39261516893F38006AF06C /* ProgressView.m in Sources */,
-				7F39261616893F3A006AF06C /* GradientView.m in Sources */,
+				7FB8C33B168C3B3000344625 /* GradientView.m in Sources */,
+				7FB8C33C168C3B3000344625 /* ProgressView.m in Sources */,
+				7FB8C340168C3B5200344625 /* ProgressGradientViewController.m in Sources */,
+				7FB8C345168C3BBE00344625 /* ImageExpandViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,8 +350,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F39260416893DD2006AF06C /* ViewDemoSWTests.m in Sources */,
-				7F39261316893E6C006AF06C /* ProgressView.m in Sources */,
-				7F39261416893E6C006AF06C /* GradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +515,7 @@
 				7F39260916893DD2006AF06C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F39260A16893DD2006AF06C /* Build configuration list for PBXNativeTarget "ViewDemoSWTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +524,7 @@
 				7F39260C16893DD2006AF06C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

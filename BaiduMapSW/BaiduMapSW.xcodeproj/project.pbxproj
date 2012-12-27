@@ -9,14 +9,19 @@
 /* Begin PBXBuildFile section */
 		7F56B14A16803C9A00E13581 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7F56B14916803C9A00E13581 /* mapapi.bundle */; };
 		7F56B16D1680406100E13581 /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F56B16C1680406100E13581 /* libbaidumapapi.a */; };
+		7FB8C310168C224200344625 /* Sip2BDMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8C30E168C224200344625 /* Sip2BDMapViewController.m */; };
+		7FB8C311168C224200344625 /* Sip2BDMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8C30F168C224200344625 /* Sip2BDMapViewController.xib */; };
+		7FB8C316168C228800344625 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8C314168C228800344625 /* ViewController.m */; };
+		7FB8C317168C228800344625 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8C315168C228800344625 /* ViewController.xib */; };
+		7FB8C31B168C22A500344625 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8C319168C22A500344625 /* TableViewController.m */; };
+		7FB8C31C168C22A500344625 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8C31A168C22A500344625 /* TableViewController.xib */; };
+		7FB8C31F168C25B500344625 /* Sip2BDMapDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8C31E168C25B500344625 /* Sip2BDMapDelegate.m */; };
 		8B822B6C14DE77EA008A70A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B822B6B14DE77EA008A70A3 /* UIKit.framework */; };
 		8B822B6E14DE77EA008A70A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B822B6D14DE77EA008A70A3 /* Foundation.framework */; };
 		8B822B7014DE77EA008A70A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B822B6F14DE77EA008A70A3 /* CoreGraphics.framework */; };
 		8B822B7614DE77EA008A70A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B822B7414DE77EA008A70A3 /* InfoPlist.strings */; };
 		8B822B7814DE77EA008A70A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B822B7714DE77EA008A70A3 /* main.m */; };
 		8B822B7C14DE77EA008A70A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B822B7B14DE77EA008A70A3 /* AppDelegate.m */; };
-		8B822B7F14DE77EA008A70A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B822B7E14DE77EA008A70A3 /* ViewController.m */; };
-		8B822B8214DE77EA008A70A3 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B822B8014DE77EA008A70A3 /* ViewController.xib */; };
 		8B822B8A14DE783C008A70A3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B822B8914DE783C008A70A3 /* CoreLocation.framework */; };
 		8B822B8C14DE7846008A70A3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B822B8B14DE7846008A70A3 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +58,17 @@
 		7F56B1891680408B00E13581 /* BMKTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKTypes.h; sourceTree = "<group>"; };
 		7F56B18A1680408B00E13581 /* BMKUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKUserLocation.h; sourceTree = "<group>"; };
 		7F56B18B1680408B00E13581 /* BMKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKVersion.h; sourceTree = "<group>"; };
+		7FB8C30D168C224200344625 /* Sip2BDMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sip2BDMapViewController.h; sourceTree = "<group>"; };
+		7FB8C30E168C224200344625 /* Sip2BDMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sip2BDMapViewController.m; sourceTree = "<group>"; };
+		7FB8C30F168C224200344625 /* Sip2BDMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Sip2BDMapViewController.xib; sourceTree = "<group>"; };
+		7FB8C313168C228800344625 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7FB8C314168C228800344625 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7FB8C315168C228800344625 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		7FB8C318168C22A500344625 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		7FB8C319168C22A500344625 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		7FB8C31A168C22A500344625 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		7FB8C31D168C25B500344625 /* Sip2BDMapDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sip2BDMapDelegate.h; sourceTree = "<group>"; };
+		7FB8C31E168C25B500344625 /* Sip2BDMapDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sip2BDMapDelegate.m; sourceTree = "<group>"; };
 		8B822B6714DE77EA008A70A3 /* BaiduMapSW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiduMapSW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B822B6B14DE77EA008A70A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8B822B6D14DE77EA008A70A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,9 +79,6 @@
 		8B822B7914DE77EA008A70A3 /* BaiduMapSW-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BaiduMapSW-Prefix.pch"; sourceTree = "<group>"; };
 		8B822B7A14DE77EA008A70A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8B822B7B14DE77EA008A70A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8B822B7D14DE77EA008A70A3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8B822B7E14DE77EA008A70A3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8B822B8114DE77EA008A70A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		8B822B8914DE783C008A70A3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8B822B8B14DE7846008A70A3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -123,6 +136,28 @@
 			path = inc;
 			sourceTree = "<group>";
 		};
+		7FB8C30B168C210400344625 /* Sip2Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				7FB8C30D168C224200344625 /* Sip2BDMapViewController.h */,
+				7FB8C30E168C224200344625 /* Sip2BDMapViewController.m */,
+				7FB8C30F168C224200344625 /* Sip2BDMapViewController.xib */,
+				7FB8C31D168C25B500344625 /* Sip2BDMapDelegate.h */,
+				7FB8C31E168C25B500344625 /* Sip2BDMapDelegate.m */,
+			);
+			path = Sip2Annotation;
+			sourceTree = "<group>";
+		};
+		7FB8C312168C228800344625 /* OriginBDMap */ = {
+			isa = PBXGroup;
+			children = (
+				7FB8C313168C228800344625 /* ViewController.h */,
+				7FB8C314168C228800344625 /* ViewController.m */,
+				7FB8C315168C228800344625 /* ViewController.xib */,
+			);
+			path = OriginBDMap;
+			sourceTree = "<group>";
+		};
 		8B822B5C14DE77EA008A70A3 = {
 			isa = PBXGroup;
 			children = (
@@ -158,11 +193,13 @@
 		8B822B7114DE77EA008A70A3 /* BaiduMapSW */ = {
 			isa = PBXGroup;
 			children = (
+				7FB8C312168C228800344625 /* OriginBDMap */,
+				7FB8C30B168C210400344625 /* Sip2Annotation */,
 				8B822B7A14DE77EA008A70A3 /* AppDelegate.h */,
 				8B822B7B14DE77EA008A70A3 /* AppDelegate.m */,
-				8B822B7D14DE77EA008A70A3 /* ViewController.h */,
-				8B822B7E14DE77EA008A70A3 /* ViewController.m */,
-				8B822B8014DE77EA008A70A3 /* ViewController.xib */,
+				7FB8C318168C22A500344625 /* TableViewController.h */,
+				7FB8C319168C22A500344625 /* TableViewController.m */,
+				7FB8C31A168C22A500344625 /* TableViewController.xib */,
 				8B822B7214DE77EA008A70A3 /* Supporting Files */,
 			);
 			path = BaiduMapSW;
@@ -231,8 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B822B7614DE77EA008A70A3 /* InfoPlist.strings in Resources */,
-				8B822B8214DE77EA008A70A3 /* ViewController.xib in Resources */,
 				7F56B14A16803C9A00E13581 /* mapapi.bundle in Resources */,
+				7FB8C311168C224200344625 /* Sip2BDMapViewController.xib in Resources */,
+				7FB8C317168C228800344625 /* ViewController.xib in Resources */,
+				7FB8C31C168C22A500344625 /* TableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +284,10 @@
 			files = (
 				8B822B7814DE77EA008A70A3 /* main.m in Sources */,
 				8B822B7C14DE77EA008A70A3 /* AppDelegate.m in Sources */,
-				8B822B7F14DE77EA008A70A3 /* ViewController.m in Sources */,
+				7FB8C310168C224200344625 /* Sip2BDMapViewController.m in Sources */,
+				7FB8C316168C228800344625 /* ViewController.m in Sources */,
+				7FB8C31B168C22A500344625 /* TableViewController.m in Sources */,
+				7FB8C31F168C25B500344625 /* Sip2BDMapDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,14 +300,6 @@
 				8B822B7514DE77EA008A70A3 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8B822B8014DE77EA008A70A3 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8B822B8114DE77EA008A70A3 /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

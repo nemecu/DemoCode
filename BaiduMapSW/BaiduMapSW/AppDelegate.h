@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BMapKit.h"
 
-@class ViewController;
+@class TableViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>{
     BMKMapManager * _mapManager;
@@ -17,6 +17,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) TableViewController *viewController;
 
 @end

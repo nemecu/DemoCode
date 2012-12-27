@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Sip2BDMapDelegate.h"
 
 static CGPoint showPoint = {160.0f,250.0f};
 static CGPoint hidePoint = {160.0f,670.0f};
@@ -83,7 +84,6 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
     self.inputCity.text = @"北京";
     self.inputKey.text = @"餐馆";
     poiPageIndex = 0;
-    
     
     
 }

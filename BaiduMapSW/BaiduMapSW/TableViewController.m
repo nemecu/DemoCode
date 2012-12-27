@@ -1,29 +1,39 @@
 //
-//  ViewController.m
-//  ViewDemoSW
+//  TableViewController.m
+//  BaiduMapSW
 //
-//  Created by shaowei on 12-12-25.
-//  Copyright (c) 2012年 LianZhan. All rights reserved.
+//  Created by shaowei on 12-12-27.
+//  Copyright (c) 2012年 苏州知惠馆信息系统有限公司. All rights reserved.
 //
 
+#import "TableViewController.h"
 #import "ViewController.h"
-#import "ImageExpandViewController.h"
-#import "ProgressGradientViewController.h"
+#import "Sip2BDMapViewController.h"
 
-
-@interface ViewController ()
-
-
+@interface TableViewController ()
 
 @end
 
-@implementation ViewController
+@implementation TableViewController
+
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-   
+
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+ 
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -32,28 +42,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)dealloc
-{
-    [_myTableView release];
-    [super dealloc];
-}
-
-
-
-
-- (void)viewDidUnload {
-    [self setMyTableView:nil];
-    [super viewDidUnload];
-}
-
-
 #pragma mark - Table view data source
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 12;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -67,12 +67,12 @@
     switch (indexPath.row) {
         case 0:
         {
-            cell.textLabel.text = @"progress+gradient";
+            cell.textLabel.text = @"origin";
         }
             break;
         case 1:
         {
-            cell.textLabel.text = @"ImageView + Expand";
+            cell.textLabel.text = @"sip2Map";
         }
             break;
             
@@ -94,7 +94,7 @@
     switch (indexPath.row) {
         case 0:
         {
-            ProgressGradientViewController *vc = [[ProgressGradientViewController alloc] initWithNibName:@"ProgressGradientViewController" bundle:nil];
+            ViewController *vc = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
             [self.navigationController pushViewController:vc animated:YES];
             [vc release];
             
@@ -102,7 +102,7 @@
             break;
         case 1:
         {
-            ImageExpandViewController *vc = [[ImageExpandViewController alloc] initWithNibName:@"ImageExpandViewController" bundle:nil];
+            Sip2BDMapViewController *vc = [[Sip2BDMapViewController alloc] initWithNibName:@"Sip2BDMapViewController" bundle:nil];
             [self.navigationController pushViewController:vc animated:YES];
             [vc release];
         }
@@ -112,6 +112,5 @@
             break;
     }
 }
-
 
 @end

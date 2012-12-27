@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
+#import "TableViewController.h"
 
 @implementation AppDelegate
 
@@ -37,8 +37,9 @@
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
-    self.window.rootViewController = self.viewController;
+    TableViewController *vcTemp = [[[TableViewController alloc] initWithNibName:@"TableViewController" bundle:nil] autorelease];
+    UINavigationController *navi = [[[UINavigationController alloc] initWithRootViewController:vcTemp] autorelease];
+    self.window.rootViewController = navi;
     [self.window makeKeyAndVisible];
     return YES;
 }
