@@ -32,7 +32,7 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
         
         pin.annotation = annotation;
         
-        pin.canShowCallout = YES;
+        pin.canShowCallout = NO;
         //        [pin setSelected:YES animated:YES];
         pin.draggable = YES;
         
@@ -108,14 +108,8 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
     //    [mapView setZoomLevel:16];
     NSLog(@"sw-2- delegate 更新位置：%d\n",mapView.zoomLevel);
     if (!mapView.userLocationVisible) {
-        NSLog(@"sw-2- delegate 显示-更新位置\n");
-        BMKCoordinateRegion region;
-        region.center = locationCoordinate;
-        region.span = BMKCoordinateSpanMake(1, 1);
-        [mapView setRegion:region animated:YES];
-        [mapView setZoomLevel:16];
-        
-        mapView.showsUserLocation = NO;
+        NSLog(@"sw-2- sip2 delegate 显示-更新位置\n");
+        [mapView setCenterCoordinate:mapView.userLocation.location.coordinate animated:YES];
         
         //        [mapView setCenterCoordinate:userLocation.location.coordinate animated:YES];
         

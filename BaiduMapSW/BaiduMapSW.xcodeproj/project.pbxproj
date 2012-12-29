@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F56B14A16803C9A00E13581 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7F56B14916803C9A00E13581 /* mapapi.bundle */; };
 		7F56B16D1680406100E13581 /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F56B16C1680406100E13581 /* libbaidumapapi.a */; };
+		7F6DBE17168EE80F00415BB9 /* AnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DBE16168EE80F00415BB9 /* AnnotationView.m */; };
 		7FB8C310168C224200344625 /* Sip2BDMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8C30E168C224200344625 /* Sip2BDMapViewController.m */; };
 		7FB8C311168C224200344625 /* Sip2BDMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8C30F168C224200344625 /* Sip2BDMapViewController.xib */; };
 		7FB8C316168C228800344625 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8C314168C228800344625 /* ViewController.m */; };
@@ -16,6 +17,10 @@
 		7FB8C31B168C22A500344625 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8C319168C22A500344625 /* TableViewController.m */; };
 		7FB8C31C168C22A500344625 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8C31A168C22A500344625 /* TableViewController.xib */; };
 		7FB8C31F168C25B500344625 /* Sip2BDMapDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8C31E168C25B500344625 /* Sip2BDMapDelegate.m */; };
+		7FB8C369168C591C00344625 /* Sip2Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8C368168C591C00344625 /* Sip2Annotation.m */; };
+		7FB8C36F168C5CD200344625 /* p_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8C36C168C5CD200344625 /* p_bg.png */; };
+		7FB8C370168C5CD200344625 /* p_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8C36D168C5CD200344625 /* p_big.png */; };
+		7FB8C371168C5CD200344625 /* p_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8C36E168C5CD200344625 /* p_small.png */; };
 		8B822B6C14DE77EA008A70A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B822B6B14DE77EA008A70A3 /* UIKit.framework */; };
 		8B822B6E14DE77EA008A70A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B822B6D14DE77EA008A70A3 /* Foundation.framework */; };
 		8B822B7014DE77EA008A70A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B822B6F14DE77EA008A70A3 /* CoreGraphics.framework */; };
@@ -58,6 +63,8 @@
 		7F56B1891680408B00E13581 /* BMKTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKTypes.h; sourceTree = "<group>"; };
 		7F56B18A1680408B00E13581 /* BMKUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKUserLocation.h; sourceTree = "<group>"; };
 		7F56B18B1680408B00E13581 /* BMKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKVersion.h; sourceTree = "<group>"; };
+		7F6DBE15168EE80F00415BB9 /* AnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationView.h; sourceTree = "<group>"; };
+		7F6DBE16168EE80F00415BB9 /* AnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationView.m; sourceTree = "<group>"; };
 		7FB8C30D168C224200344625 /* Sip2BDMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sip2BDMapViewController.h; sourceTree = "<group>"; };
 		7FB8C30E168C224200344625 /* Sip2BDMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sip2BDMapViewController.m; sourceTree = "<group>"; };
 		7FB8C30F168C224200344625 /* Sip2BDMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Sip2BDMapViewController.xib; sourceTree = "<group>"; };
@@ -69,6 +76,11 @@
 		7FB8C31A168C22A500344625 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		7FB8C31D168C25B500344625 /* Sip2BDMapDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sip2BDMapDelegate.h; sourceTree = "<group>"; };
 		7FB8C31E168C25B500344625 /* Sip2BDMapDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sip2BDMapDelegate.m; sourceTree = "<group>"; };
+		7FB8C367168C591B00344625 /* Sip2Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sip2Annotation.h; sourceTree = "<group>"; };
+		7FB8C368168C591C00344625 /* Sip2Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sip2Annotation.m; sourceTree = "<group>"; };
+		7FB8C36C168C5CD200344625 /* p_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p_bg.png; sourceTree = "<group>"; };
+		7FB8C36D168C5CD200344625 /* p_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p_big.png; sourceTree = "<group>"; };
+		7FB8C36E168C5CD200344625 /* p_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p_small.png; sourceTree = "<group>"; };
 		8B822B6714DE77EA008A70A3 /* BaiduMapSW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiduMapSW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B822B6B14DE77EA008A70A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8B822B6D14DE77EA008A70A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -144,6 +156,10 @@
 				7FB8C30F168C224200344625 /* Sip2BDMapViewController.xib */,
 				7FB8C31D168C25B500344625 /* Sip2BDMapDelegate.h */,
 				7FB8C31E168C25B500344625 /* Sip2BDMapDelegate.m */,
+				7FB8C367168C591B00344625 /* Sip2Annotation.h */,
+				7FB8C368168C591C00344625 /* Sip2Annotation.m */,
+				7F6DBE15168EE80F00415BB9 /* AnnotationView.h */,
+				7F6DBE16168EE80F00415BB9 /* AnnotationView.m */,
 			);
 			path = Sip2Annotation;
 			sourceTree = "<group>";
@@ -158,9 +174,21 @@
 			path = OriginBDMap;
 			sourceTree = "<group>";
 		};
+		7FB8C36B168C5CD200344625 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				7FB8C36C168C5CD200344625 /* p_bg.png */,
+				7FB8C36D168C5CD200344625 /* p_big.png */,
+				7FB8C36E168C5CD200344625 /* p_small.png */,
+			);
+			name = res;
+			path = inc/res;
+			sourceTree = "<group>";
+		};
 		8B822B5C14DE77EA008A70A3 = {
 			isa = PBXGroup;
 			children = (
+				7FB8C36B168C5CD200344625 /* res */,
 				7F56B16E1680408B00E13581 /* inc */,
 				8B822B7114DE77EA008A70A3 /* BaiduMapSW */,
 				8B822B6A14DE77EA008A70A3 /* Frameworks */,
@@ -272,6 +300,9 @@
 				7FB8C311168C224200344625 /* Sip2BDMapViewController.xib in Resources */,
 				7FB8C317168C228800344625 /* ViewController.xib in Resources */,
 				7FB8C31C168C22A500344625 /* TableViewController.xib in Resources */,
+				7FB8C36F168C5CD200344625 /* p_bg.png in Resources */,
+				7FB8C370168C5CD200344625 /* p_big.png in Resources */,
+				7FB8C371168C5CD200344625 /* p_small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +319,8 @@
 				7FB8C316168C228800344625 /* ViewController.m in Sources */,
 				7FB8C31B168C22A500344625 /* TableViewController.m in Sources */,
 				7FB8C31F168C25B500344625 /* Sip2BDMapDelegate.m in Sources */,
+				7FB8C369168C591C00344625 /* Sip2Annotation.m in Sources */,
+				7F6DBE17168EE80F00415BB9 /* AnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

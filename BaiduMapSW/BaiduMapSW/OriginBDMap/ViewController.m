@@ -16,6 +16,12 @@ static CLLocationCoordinate2D locationCoordinate = {31.290386, 120.662656};
 static CLLocationCoordinate2D leftBottomCoordinate = {31.190386, 120.562656};
 static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
 
+@interface ViewController()
+
+@property (retain, nonatomic) Sip2BDMapDelegate *sip2Delegate;
+
+@end
+
 @implementation ViewController
 @synthesize btnView;
 @synthesize isMode;
@@ -46,16 +52,16 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
     self.showStatus.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:0.2];
     [self.showStatus setTextAlignment:UITextAlignmentCenter];
     
-    mapView = [[BMKMapView alloc] initWithFrame:self.view.bounds];
-    mapView.delegate = self;
+    _mapView = [[BMKMapView alloc] initWithFrame:self.view.bounds];
+    _mapView.delegate = self;
     BMKCoordinateRegion region;
     region.center = locationCoordinate;
-    region.span = BMKCoordinateSpanMake(0.1, 0.1);
-    [mapView setRegion:region animated:YES];
-    [mapView setShowsUserLocation:YES];
-    [mapView setZoomLevel:16];
-    [self.view insertSubview:mapView belowSubview:self.myScrollView];
-    [mapView setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight];
+    region.span = BMKCoordinateSpanMake(0.2, 0.2);
+    [_mapView setRegion:region animated:YES];
+    [_mapView setShowsUserLocation:YES];
+    [_mapView setZoomLevel:16];
+    [self.view insertSubview:_mapView belowSubview:self.myScrollView];
+    [_mapView setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight];
 
     self.myScrollView.frame = CGRectMake(0, 40, 320, 420);
     [self.myScrollView setClipsToBounds:NO];
@@ -85,6 +91,9 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
     self.inputKey.text = @"餐馆";
     poiPageIndex = 0;
     
+    
+    //添加代理
+    [self addAllDelegate];
     
 }
 
@@ -130,6 +139,7 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
 
 
 - (void)dealloc {
+    [_sip2Delegate release];
     [btnView release];
     [showStatus release];
     [myScrollView release];
@@ -137,6 +147,12 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
     [inputCity release];
     [inputKey release];
     [super dealloc];
+}
+
+#pragma mark - Custom Function
+
+- (void)addAllDelegate{
+    _sip2Delegate = [[Sip2BDMapDelegate alloc] init];
 }
 
 - (void)hideKeyboard{
@@ -180,8 +196,8 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
     [self hideKeyboard];
     [self actionViewHide:nil];
     
-    NSArray *arr = [NSArray arrayWithArray:[mapView annotations]];
-    [mapView removeAnnotations:arr];
+    NSArray *arr = [NSArray arrayWithArray:[_mapView annotations]];
+    [_mapView removeAnnotations:arr];
     
     NSString *keyString;
     if ([self.inputKey.text length] > 0) {
@@ -189,7 +205,7 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
     }else{
         keyString = @"餐馆";
     }
-    [POISearch poiSearchNearBy:keyString center:mapView.userLocation.coordinate radius:1000 pageIndex:poiPageIndex];
+    [POISearch poiSearchNearBy:keyString center:_mapView.userLocation.coordinate radius:1000 pageIndex:poiPageIndex];
 }
 
 - (IBAction)actionBusSearch:(id)sender {
@@ -225,7 +241,7 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
                                 ,poi.address];
             annotation.subtitle = poi.phone;
             annotation.coordinate = poi.pt;
-            [mapView addAnnotation:annotation];
+            [_mapView addAnnotation:annotation];
             [annotation release];
         }
 //        if (result.pageNum > result.pageIndex) {
@@ -299,16 +315,17 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
 }
 
 - (IBAction)actionAddAnnotation:(id)sender {
-    
+    static double increment = 0.0f;
+    increment+=0.01f;
     [self actionViewHide:nil];
     BMKPointAnnotation *annotation = [[BMKPointAnnotation alloc] init];
     CLLocationCoordinate2D coordinate;
-    coordinate.latitude = 39.915f;
-    coordinate.longitude = 116.404f;
+    coordinate.latitude = locationCoordinate.latitude + increment;
+    coordinate.longitude = locationCoordinate.longitude + increment;
     annotation.coordinate = coordinate;
     annotation.title = @"SW北京";
     annotation.subtitle = @"SW-SUB-title";
-    [mapView addAnnotation:annotation];
+    [_mapView addAnnotation:annotation];
     self.showStatus.text = [NSString stringWithFormat:@"添加 大头钉"];
 
 }
@@ -317,8 +334,8 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
 //    [self actionViewHide:nil];
 //    NSArray *arr = [mapView annotations];
 //    [mapView removeAnnotations:arr];
-    NSArray* array = [NSArray arrayWithArray:mapView.annotations];
-	[mapView removeAnnotations:array];
+    NSArray* array = [NSArray arrayWithArray:_mapView.annotations];
+	[_mapView removeAnnotations:array];
     self.showStatus.text = [NSString stringWithFormat:@"移除 大头钉"];
 }
 
@@ -331,7 +348,7 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
     coor[1].longitude = 116.504;
     
     BMKPolyline *poliLayer = [BMKPolyline polylineWithCoordinates:coor count:2];
-    [mapView addOverlay:poliLayer];
+    [_mapView addOverlay:poliLayer];
     self.showStatus.text = [NSString stringWithFormat:@"添加直线"];
 }
 
@@ -346,7 +363,7 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
     coords[2].longitude = 117;
     
     BMKPolygon *polygon = [BMKPolygon polygonWithCoordinates:coords count:3];
-    [mapView addOverlay:polygon];
+    [_mapView addOverlay:polygon];
     
     self.showStatus.text = [NSString stringWithFormat:@"添加-三角"];
 }
@@ -358,57 +375,57 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
     coor.longitude = 116;
     BMKCircle *circle = [BMKCircle circleWithCenterCoordinate:coor radius:90000];
     circleOverLayer = [circle retain];
-    [mapView addOverlay:circle];
+    [_mapView addOverlay:circle];
     
     self.showStatus.text = [NSString stringWithFormat:@"添加-圆"];
 }
 
 - (IBAction)removeOverLayer:(id)sender {
     [self actionViewHide:nil];
-    NSArray *arrOfoverLayer = [NSArray arrayWithArray:[mapView overlays]];
-    [mapView removeOverlays:arrOfoverLayer];
+    NSArray *arrOfoverLayer = [NSArray arrayWithArray:[_mapView overlays]];
+    [_mapView removeOverlays:arrOfoverLayer];
     [circleOverLayer release];
     self.showStatus.text = [NSString stringWithFormat:@"删除 OverLayer"];
 }
 
 - (IBAction)actionZhiHuiGuan:(id)sender {
     [self actionViewHide:nil];
-    [mapView setCenterCoordinate:CLLocationCoordinate2DMake(31.290386, 120.662656) animated:YES];
+    [_mapView setCenterCoordinate:CLLocationCoordinate2DMake(31.290386, 120.662656) animated:YES];
     BMKPointAnnotation *annotation = [[BMKPointAnnotation alloc] init];
     annotation.coordinate = CLLocationCoordinate2DMake(31.290386, 120.662656);
     annotation.title = @"知惠馆";
-    [mapView setZoomLevel:17];
-    [mapView addAnnotation:annotation];
+    [_mapView setZoomLevel:17];
+    [_mapView addAnnotation:annotation];
     
     self.showStatus.text = [NSString stringWithFormat:@"定位-知惠馆"];
     
 }
 
 - (IBAction)actionZoomIn:(id)sender {
-    BOOL status = [mapView zoomIn];
+    BOOL status = [_mapView zoomIn];
     if (status) {
-        self.showStatus.text = [NSString stringWithFormat:@"地图 放大-成功:%d",mapView.zoomLevel];
+        self.showStatus.text = [NSString stringWithFormat:@"地图 放大-成功:%d",_mapView.zoomLevel];
     }else{
-        self.showStatus.text = [NSString stringWithFormat:@"地图 放大-失败:%d",mapView.zoomLevel];
+        self.showStatus.text = [NSString stringWithFormat:@"地图 放大-失败:%d",_mapView.zoomLevel];
     }
 }
 
 - (IBAction)actionZoomOut:(id)sender {
-    BOOL status = [mapView zoomOut];
+    BOOL status = [_mapView zoomOut];
     if (status) {
-        self.showStatus.text = [NSString stringWithFormat:@"地图 缩小-成功:%d",mapView.zoomLevel];
+        self.showStatus.text = [NSString stringWithFormat:@"地图 缩小-成功:%d",_mapView.zoomLevel];
     }else{
-        self.showStatus.text = [NSString stringWithFormat:@"地图 缩小-失败:%d",mapView.zoomLevel];
+        self.showStatus.text = [NSString stringWithFormat:@"地图 缩小-失败:%d",_mapView.zoomLevel];
     }
 }
 
 - (IBAction)actionChangeMode:(id)sender {
     [self actionViewHide:nil];
     if (isMode) {
-        [mapView setMapType:BMKMapTypeTrafficOn];
+        [_mapView setMapType:BMKMapTypeTrafficOn];
         self.showStatus.text = [NSString stringWithFormat:@"地图Mode-交通"];
     }else{
-        [mapView setMapType:BMKMapTypeStandard];
+        [_mapView setMapType:BMKMapTypeStandard];
         self.showStatus.text = [NSString stringWithFormat:@"地图Mode-标准"];
     }
     isMode = !isMode;
@@ -417,18 +434,21 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
 
 - (IBAction)actionStartLocation:(id)sender {
     [self actionViewHide:nil];
-    if (![mapView showsUserLocation]) {
-        [mapView setShowsUserLocation:YES];
+    if (![_mapView showsUserLocation]) {
+        [_mapView setShowsUserLocation:YES];
         
         self.showStatus.text = [NSString stringWithFormat:@"定位中...."];
     }else{
-        [mapView setShowsUserLocation:NO];
+        [_mapView setShowsUserLocation:NO];
         self.showStatus.text = [NSString stringWithFormat:@"停止定位"];
     }
     isLocation = !isLocation;
 }
 
-
+#pragma mark 代理转换
+- (IBAction)actionBindDelegate:(id)sender {
+    _mapView.delegate = _sip2Delegate;
+}
 
 
 
@@ -448,6 +468,7 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
 
         ((BMKPinAnnotationView *)pin).pinColor = BMKPinAnnotationColorRed;
         ((BMKPinAnnotationView *)pin).animatesDrop = YES;
+        
         
         pin.annotation = annotation;
         
@@ -528,18 +549,20 @@ static CLLocationCoordinate2D rightTopCoordinate = {31.390386, 120.762656};
     NSLog(@"sw-2- delegate 更新位置：%d\n",mapView.zoomLevel);
     if (!mapView.userLocationVisible) {
         NSLog(@"sw-2- delegate 显示-更新位置\n");
-        BMKCoordinateRegion region;
-        region.center = locationCoordinate;
-        region.span = BMKCoordinateSpanMake(1, 1);
-        [mapView setRegion:region animated:YES];
-        [mapView setZoomLevel:16];
+//        BMKCoordinateRegion region;
+//        region.center = locationCoordinate;
+//        region.span = BMKCoordinateSpanMake(1, 1);
+//        [mapView setRegion:region animated:YES];
+//        [mapView setZoomLevel:16];
+        [mapView setCenterCoordinate:mapView.userLocation.location.coordinate animated:YES];
         
-        mapView.showsUserLocation = NO;
+//        mapView.showsUserLocation = NO;
         
 //        [mapView setCenterCoordinate:userLocation.location.coordinate animated:YES];
         
     }
 }
+
 
 
 

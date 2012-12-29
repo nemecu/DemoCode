@@ -59,6 +59,8 @@
 
 - (IBAction)actionIncrease:(id)sender {
     CGRect frame = self.myTestView.frame;
+    frame.origin.x +=2;
+    frame.origin.y +=2;
     frame.size.width +=5;
     frame.size.height +=5;
     self.myTestView.frame = frame;
@@ -66,6 +68,8 @@
 
 - (IBAction)actionReduce:(id)sender {
     CGRect frame = self.myTestView.frame;
+    frame.origin.x -=2;
+    frame.origin.y -=2;
     frame.size.width -=5;
     frame.size.height -=5;
     self.myTestView.frame = frame;

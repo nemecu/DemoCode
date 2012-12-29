@@ -39,7 +39,7 @@
         //初始化默认值
         self.bottomColor = [UIColor redColor];
         self.topColor = [UIColor blueColor];
-        self.progressValue = 0;
+        self.progressValue = 0.2f;
         self.height = 5.0f;
         self.isRemoveFromSuperAfterToFull = NO;
         self.gradient = [self generateGradient];

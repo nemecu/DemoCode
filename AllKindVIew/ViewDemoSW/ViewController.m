@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ImageExpandViewController.h"
 #import "ProgressGradientViewController.h"
+#import "AnnotationViewController.h"
 
 
 @interface ViewController ()
@@ -75,6 +76,11 @@
             cell.textLabel.text = @"ImageView + Expand";
         }
             break;
+        case 2:
+        {
+            cell.textLabel.text = @"AnnotationView";
+        }
+            break;
             
         default:
             break;
@@ -103,6 +109,13 @@
         case 1:
         {
             ImageExpandViewController *vc = [[ImageExpandViewController alloc] initWithNibName:@"ImageExpandViewController" bundle:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+            [vc release];
+        }
+            break;
+        case 2:
+        {
+            AnnotationViewController *vc = [[AnnotationViewController alloc] initWithNibName:@"AnnotationViewController" bundle:nil];
             [self.navigationController pushViewController:vc animated:YES];
             [vc release];
         }

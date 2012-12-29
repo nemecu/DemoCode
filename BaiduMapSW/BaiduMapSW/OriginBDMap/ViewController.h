@@ -10,7 +10,7 @@
 #import "BMapKit.h"
 
 @interface ViewController : UIViewController<BMKMapViewDelegate,BMKSearchDelegate>{
-    BMKMapView *mapView;
+    BMKMapView *_mapView;
     BMKCircle *circleOverLayer;
     BOOL isMode;
     BOOL isLocation;
@@ -55,7 +55,8 @@
 - (IBAction)actionChangeMode:(id)sender;
 - (IBAction)actionStartLocation:(id)sender;
 
-
+//代理转换
+- (IBAction)actionBindDelegate:(id)sender;
 
 
 

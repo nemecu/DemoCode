@@ -23,6 +23,16 @@
 		7F3925F916893DD2006AF06C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3925D416893DD1006AF06C /* Foundation.framework */; };
 		7F39260116893DD2006AF06C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F3925FF16893DD2006AF06C /* InfoPlist.strings */; };
 		7F39260416893DD2006AF06C /* ViewDemoSWTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F39260316893DD2006AF06C /* ViewDemoSWTests.m */; };
+		7F6DBE28168EFF7800415BB9 /* AnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DBE27168EFF7800415BB9 /* AnnotationView.m */; };
+		7F6DBE2C168EFF8B00415BB9 /* AnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DBE2A168EFF8B00415BB9 /* AnnotationViewController.m */; };
+		7F6DBE2D168EFF8B00415BB9 /* AnnotationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F6DBE2B168EFF8B00415BB9 /* AnnotationViewController.xib */; };
+		7F6DBE31168F01BF00415BB9 /* p_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F6DBE2E168F01BE00415BB9 /* p_bg.png */; };
+		7F6DBE32168F01BF00415BB9 /* p_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F6DBE2F168F01BE00415BB9 /* p_big.png */; };
+		7F6DBE33168F01BF00415BB9 /* p_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F6DBE30168F01BF00415BB9 /* p_small.png */; };
+		7F6DBE34168F022400415BB9 /* AnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DBE27168EFF7800415BB9 /* AnnotationView.m */; };
+		7F6DBE35168F023200415BB9 /* AnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DBE2A168EFF8B00415BB9 /* AnnotationViewController.m */; };
+		7F6DBE36168F02AD00415BB9 /* AnnotationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F6DBE2B168EFF8B00415BB9 /* AnnotationViewController.xib */; };
+		7FB792D5168DB10700C9ABE0 /* GraphicCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB792D4168DB10700C9ABE0 /* GraphicCircleView.m */; };
 		7FB8C33B168C3B3000344625 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8C338168C3B3000344625 /* GradientView.m */; };
 		7FB8C33C168C3B3000344625 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8C33A168C3B3000344625 /* ProgressView.m */; };
 		7FB8C340168C3B5200344625 /* ProgressGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8C33E168C3B5200344625 /* ProgressGradientViewController.m */; };
@@ -65,6 +75,16 @@
 		7F39260016893DD2006AF06C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7F39260216893DD2006AF06C /* ViewDemoSWTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewDemoSWTests.h; sourceTree = "<group>"; };
 		7F39260316893DD2006AF06C /* ViewDemoSWTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewDemoSWTests.m; sourceTree = "<group>"; };
+		7F6DBE26168EFF7800415BB9 /* AnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationView.h; sourceTree = "<group>"; };
+		7F6DBE27168EFF7800415BB9 /* AnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationView.m; sourceTree = "<group>"; };
+		7F6DBE29168EFF8B00415BB9 /* AnnotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationViewController.h; sourceTree = "<group>"; };
+		7F6DBE2A168EFF8B00415BB9 /* AnnotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationViewController.m; sourceTree = "<group>"; };
+		7F6DBE2B168EFF8B00415BB9 /* AnnotationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnnotationViewController.xib; sourceTree = "<group>"; };
+		7F6DBE2E168F01BE00415BB9 /* p_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p_bg.png; sourceTree = "<group>"; };
+		7F6DBE2F168F01BE00415BB9 /* p_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p_big.png; sourceTree = "<group>"; };
+		7F6DBE30168F01BF00415BB9 /* p_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p_small.png; sourceTree = "<group>"; };
+		7FB792D3168DB10700C9ABE0 /* GraphicCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicCircleView.h; sourceTree = "<group>"; };
+		7FB792D4168DB10700C9ABE0 /* GraphicCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphicCircleView.m; sourceTree = "<group>"; };
 		7FB8C337168C3B3000344625 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		7FB8C338168C3B3000344625 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
 		7FB8C339168C3B3000344625 /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
@@ -183,11 +203,24 @@
 		7F39260E16893E44006AF06C /* AllView */ = {
 			isa = PBXGroup;
 			children = (
+				7F6DBE24168EFF6000415BB9 /* MapAnnotationView */,
 				7FB8C335168C3B3000344625 /* ImageViewExpand */,
 				7FB8C336168C3B3000344625 /* ProgressGradient */,
 			);
 			name = AllView;
 			path = ViewDemoSW/AllView;
+			sourceTree = "<group>";
+		};
+		7F6DBE24168EFF6000415BB9 /* MapAnnotationView */ = {
+			isa = PBXGroup;
+			children = (
+				7F6DBE26168EFF7800415BB9 /* AnnotationView.h */,
+				7F6DBE27168EFF7800415BB9 /* AnnotationView.m */,
+				7F6DBE29168EFF8B00415BB9 /* AnnotationViewController.h */,
+				7F6DBE2A168EFF8B00415BB9 /* AnnotationViewController.m */,
+				7F6DBE2B168EFF8B00415BB9 /* AnnotationViewController.xib */,
+			);
+			path = MapAnnotationView;
 			sourceTree = "<group>";
 		};
 		7FB8C335168C3B3000344625 /* ImageViewExpand */ = {
@@ -207,6 +240,8 @@
 				7FB8C338168C3B3000344625 /* GradientView.m */,
 				7FB8C339168C3B3000344625 /* ProgressView.h */,
 				7FB8C33A168C3B3000344625 /* ProgressView.m */,
+				7FB792D3168DB10700C9ABE0 /* GraphicCircleView.h */,
+				7FB792D4168DB10700C9ABE0 /* GraphicCircleView.m */,
 				7FB8C33D168C3B5200344625 /* ProgressGradientViewController.h */,
 				7FB8C33E168C3B5200344625 /* ProgressGradientViewController.m */,
 				7FB8C33F168C3B5200344625 /* ProgressGradientViewController.xib */,
@@ -218,6 +253,9 @@
 			isa = PBXGroup;
 			children = (
 				7FB8C349168C42A700344625 /* 转发_bg.png */,
+				7F6DBE2E168F01BE00415BB9 /* p_bg.png */,
+				7F6DBE2F168F01BE00415BB9 /* p_big.png */,
+				7F6DBE30168F01BF00415BB9 /* p_small.png */,
 			);
 			path = Res;
 			sourceTree = "<group>";
@@ -301,6 +339,7 @@
 				7FB8C341168C3B5200344625 /* ProgressGradientViewController.xib in Resources */,
 				7FB8C346168C3BBE00344625 /* ImageExpandViewController.xib in Resources */,
 				7FB8C34A168C42A700344625 /* 转发_bg.png in Resources */,
+				7F6DBE36168F02AD00415BB9 /* AnnotationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +348,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F39260116893DD2006AF06C /* InfoPlist.strings in Resources */,
+				7F6DBE2D168EFF8B00415BB9 /* AnnotationViewController.xib in Resources */,
+				7F6DBE31168F01BF00415BB9 /* p_bg.png in Resources */,
+				7F6DBE32168F01BF00415BB9 /* p_big.png in Resources */,
+				7F6DBE33168F01BF00415BB9 /* p_small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +385,9 @@
 				7FB8C33C168C3B3000344625 /* ProgressView.m in Sources */,
 				7FB8C340168C3B5200344625 /* ProgressGradientViewController.m in Sources */,
 				7FB8C345168C3BBE00344625 /* ImageExpandViewController.m in Sources */,
+				7FB792D5168DB10700C9ABE0 /* GraphicCircleView.m in Sources */,
+				7F6DBE34168F022400415BB9 /* AnnotationView.m in Sources */,
+				7F6DBE35168F023200415BB9 /* AnnotationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +396,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F39260416893DD2006AF06C /* ViewDemoSWTests.m in Sources */,
+				7F6DBE28168EFF7800415BB9 /* AnnotationView.m in Sources */,
+				7F6DBE2C168EFF8B00415BB9 /* AnnotationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
