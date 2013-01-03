@@ -11,7 +11,7 @@
 #define AV_SCREEN_BOUNDS [[UIScreen mainScreen] bounds]                       //屏幕尺寸
 #define AV_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width             //屏幕宽度
 #define AV_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height           //屏幕高度
-#define AV_ANIMATION_DURATION 2
+#define AV_ANIMATION_DURATION 1
 
 static CGSize sViewMiniSize = {50, 50};
 static CGSize sViewMaxSize = {60, 60};
@@ -38,8 +38,8 @@ static CGSize sViewMaxSize = {60, 60};
 
 - (id)init
 {
-    self = [self initWithFrame:CGRectMake(100,
-                                          100,
+    self = [self initWithFrame:CGRectMake(50,
+                                          50,
                                           sViewMiniSize.width,
                                           sViewMiniSize.height)];
     if (self) {
@@ -100,6 +100,7 @@ static CGSize sViewMaxSize = {60, 60};
 - (void)addImageView{
     UIImageView *temp = [[UIImageView alloc] init];
     self.imageViewOfFlag = temp;
+    [_imageViewOfFlag setImage:[UIImage imageNamed:@"p_big"]];
     [temp release];
     [_imageViewOfFlag setFrame:CGRectMake(0, 0, self.frame.size.height, self.frame.size.height)];
     
@@ -120,6 +121,25 @@ static CGSize sViewMaxSize = {60, 60};
 
 #pragma mark - animation
 
+// 缩小
+- (void)animationZoomOut{
+    [UIView animateWithDuration:AV_ANIMATION_DURATION
+                     animations:^{
+                         //View尺寸扩大
+                         CGRect frame = self.frame;
+                         frame.size = CGSizeZero;
+                         self.frame = frame;
+                         
+                         //隐藏右箭头
+                         [self setAllViewHidden:YES];
+                         
+                     } completion:^(BOOL finished) {
+                         [self animationExtend];
+                     }];
+}
+
+
+//扩大
 - (void)animationZoomIn{
     [UIView animateWithDuration:AV_ANIMATION_DURATION
                      animations:^{
@@ -129,13 +149,19 @@ static CGSize sViewMaxSize = {60, 60};
                          self.frame = frame;
                          
                          //显示右箭头
-                         _imageViewOfArrow.hidden = NO;
+                         [self setAllViewHidden:NO];
                          
                      } completion:^(BOOL finished) {
                          [self animationExtend];
                      }];
 }
 
+//收缩
+- (void)animationShrink{
+    
+}
+
+//伸展
 - (void)animationExtend{
     [UIView animateWithDuration:AV_ANIMATION_DURATION
                      animations:^{
@@ -164,6 +190,7 @@ static CGSize sViewMaxSize = {60, 60};
 
 - (void)resetStatus{
     _imageViewOfArrow.hidden = YES;
+    _textFieldTitle.hidden = YES;
     self.hidden = YES;
 }
 
@@ -176,14 +203,26 @@ static CGSize sViewMaxSize = {60, 60};
     _textFieldTitle.text = title;
 }
 
+- (void)setAllViewHidden:(BOOL)isHidden{
+    _imageViewOfArrow.hidden = isHidden;
+    _textFieldTitle.hidden = isHidden;
+    _imageViewOfFlag.hidden = isHidden;
+}
+
 - (void)setShow:(BOOL)isShow{
     if (isShow) {
         //显示
+        NSLog(@"SW -Log 显示");
         self.hidden = NO;
         [self animationZoomIn];
     }else{
         //隐藏
+        NSLog(@"SW -Log 隐藏");
     }
+}
+
+- (void)setAnnotationViewPoint:(CGPoint)location{
+    
 }
 
 

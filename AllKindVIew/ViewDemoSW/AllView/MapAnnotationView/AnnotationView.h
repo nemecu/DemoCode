@@ -16,4 +16,6 @@
 - (void)setImageName:(NSString *)imageName andTitle:(NSString *)title;
 - (void)setShow:(BOOL)isShow;
 
+- (void)setAnnotationViewPoint:(CGPoint)location;
+
 @end

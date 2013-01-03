@@ -31,6 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     AnnotationView *annotationView = [[AnnotationView alloc] init];
+    self.testView = annotationView;
     [self.view addSubview:annotationView];
     [annotationView release];
 }
