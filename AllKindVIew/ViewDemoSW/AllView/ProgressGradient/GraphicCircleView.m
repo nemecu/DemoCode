@@ -26,11 +26,13 @@
 {
     // Drawing code
     CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextMoveToPoint(context, rect.size.width*0.5f,
+                         rect.size.height*0.5f);
     CGContextAddArc(context,
                     rect.size.width*0.5f,
                     rect.size.height*0.5f,
                     60,
-                    M_PI_4, M_PI, 1);
+                    0, M_PI_4+M_PI, 0);
     [[UIColor whiteColor] setFill];
     CGContextFillPath(context);
 }
