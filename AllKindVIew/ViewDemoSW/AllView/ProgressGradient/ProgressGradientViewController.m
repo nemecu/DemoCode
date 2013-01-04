@@ -35,6 +35,8 @@
     [self addGradientView];
     [self addProgressView];
     [self addCircle];
+    [self sizeToFitDemo];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -81,6 +83,29 @@
     GradientView *gradientView = [[GradientView alloc] initWithFrame:CGRectMake(10, 50, 300, 45)];
     [self.view addSubview:gradientView];
     [gradientView release];
+}
+
+- (void)sizeToFitDemo
+{
+	
+	UIView * whiteView = [[UIView alloc] initWithFrame:CGRectMake(10, 100, 90, 90)];
+    whiteView.backgroundColor = [UIColor grayColor];
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 80, 20)];
+	label.backgroundColor = [UIColor redColor];
+    [label setNumberOfLines:0];
+    label.text = @"kkjkjkkjkjkjkjjkjkjkjjkjkkjkjkjkjk2222222222222";
+    [whiteView addSubview:label];
+	
+    NSLog(@"the label bounds : %@", NSStringFromCGRect(label.frame));
+	
+    CGSize fitSize = [label sizeThatFits:CGSizeMake(100, 1000)];
+    [label sizeToFit];
+    NSObject
+	
+    NSLog(@"the label bounds : %@,fitSize:%@", NSStringFromCGRect(label.frame),NSStringFromCGSize(fitSize));
+	
+    [self.view addSubview:whiteView];
+	
 }
 
 @end
