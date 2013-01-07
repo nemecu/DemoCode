@@ -9,9 +9,13 @@
 #import <Foundation/Foundation.h>
 
 #import "BMapKit.h"
+#import "LZBMKAnnotationViewProtocol.h"
 
 @interface LZBMKMapViewDelegate : NSObject<BMKMapViewDelegate>{
-    BMKAnnotationView *selectedAV;
+    
+    
 }
+@property (nonatomic,retain) UIView<LZBMKAnnotationViewProtocol> *bubbleView;
+
 
 @end

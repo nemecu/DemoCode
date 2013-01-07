@@ -9,7 +9,22 @@
 #import "LZBMKMapViewDelegate.h"
 
 
+
+@interface LZBMKMapViewDelegate(){
+    BMKAnnotationView *_selectedAV;
+}
+
+
+
+@end
+
 @implementation LZBMKMapViewDelegate
+
+- (void)dealloc
+{
+    [_bubbleView release];
+    [super dealloc];
+}
 
 - (id)init
 {
@@ -31,7 +46,7 @@
             pin = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation
                                                    reuseIdentifier:annotationViewID];
         }
-        
+        BMKBaiduCoorForGcj(<#CLLocationCoordinate2D coorGcj#>)
         ((BMKPinAnnotationView *)pin).pinColor = BMKPinAnnotationColorRed;
         ((BMKPinAnnotationView *)pin).animatesDrop = YES;
         
@@ -60,23 +75,23 @@
 {
     DLog(@"选中标注");
     //CGPoint point = [mapView convertCoordinate:view.annotation.coordinate toPointToView:mapView];
-    if ([view isKindOfClass:[BMKPinAnnotationView class]]) {
+    if ([view isKindOfClass:[BMKAnnotationView class]]) {
 #ifdef Debug
         CGPoint point = [mapView convertCoordinate:selectedAV.annotation.coordinate toPointToView:selectedAV.superview];
         //CGRect rect = selectedAV.frame;
         DLog(@"annotationPoint:x=%.1f, y=%.1f class:%@", point.x, point.y,NSStringFromClass([selectedAV.superview class]));
 #endif
-        selectedAV = view;
-//        if (bubbleView.superview == nil) {
-//			//bubbleView加在BMKAnnotationView的superview(UIScrollView)上,且令zPosition为1
-//            [view.superview addSubview:bubbleView];
-//            bubbleView.layer.zPosition = 1;
+        _selectedAV = view;
+//        if (_bubbleView.superview == nil) {
+			//bubbleView加在BMKAnnotationView的superview(UIScrollView)上,且令zPosition为1
+//            [view.superview addSubview:_bubbleView];
+//            _bubbleView.layer.zPosition = 1;
 //        }
-//        bubbleView.infoDict = [dataArray objectAtIndex:[(KYPointAnnotation*)view.annotation tag]];
+        _bubbleView.infoDict = view.annotation;
         //[self showBubble:YES];先移动地图，完成后再显示气泡
     }
     else {
-        selectedAV = nil;
+        _selectedAV = nil;
     }
     [mapView setCenterCoordinate:view.annotation.coordinate animated:YES];
 }
@@ -84,7 +99,7 @@
 - (void)mapView:(BMKMapView *)mapView didDeselectAnnotationView:(BMKAnnotationView *)view
 {
     DLog(@"取消选中标注");
-    if ([view isKindOfClass:[BMKPinAnnotationView class]]) {
+    if ([view isKindOfClass:[BMKAnnotationView class]]) {
         [self showBubble:NO];
     }
 }
@@ -92,7 +107,7 @@
 #pragma mark map-区域改变
 - (void)mapView:(BMKMapView *)mapView regionWillChangeAnimated:(BOOL)animated
 {
-    if (selectedAV) {
+    if (_selectedAV) {
 #ifdef Debug
         CGPoint point = [mapView convertCoordinate:selectedAV.annotation.coordinate toPointToView:selectedAV.superview];
         //CGRect rect = selectedAV.frame;
@@ -104,7 +119,7 @@
 
 - (void)mapView:(BMKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
-    if (selectedAV) {
+    if (_selectedAV) {
         [self showBubble:YES];
         [self changeBubblePosition];
         
@@ -160,9 +175,20 @@
     
 }
 
-#pragma mark 弹出Bubble操作
+
+#pragma mark - 弹出Bubble操作
 - (void)showBubble:(BOOL)show{
     
+}
+
+- (void)changeBubblePosition {
+    if (_selectedAV) {
+        CGRect rect = _selectedAV.frame;
+        CGPoint center;
+        center.x = rect.origin.x + rect.size.width/2;
+        center.y = rect.origin.y - _bubbleView.frame.size.height/2 + 8;
+        _bubbleView.center = center;
+    }
 }
 
 

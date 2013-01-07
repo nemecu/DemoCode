@@ -22,6 +22,7 @@
 		7FB8C36F168C5CD200344625 /* p_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8C36C168C5CD200344625 /* p_bg.png */; };
 		7FB8C370168C5CD200344625 /* p_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8C36D168C5CD200344625 /* p_big.png */; };
 		7FB8C371168C5CD200344625 /* p_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8C36E168C5CD200344625 /* p_small.png */; };
+		7FE87A621697C309009C7574 /* LZAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE87A611697C309009C7574 /* LZAnnotationView.m */; };
 		8B822B6C14DE77EA008A70A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B822B6B14DE77EA008A70A3 /* UIKit.framework */; };
 		8B822B6E14DE77EA008A70A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B822B6D14DE77EA008A70A3 /* Foundation.framework */; };
 		8B822B7014DE77EA008A70A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B822B6F14DE77EA008A70A3 /* CoreGraphics.framework */; };
@@ -35,7 +36,6 @@
 /* Begin PBXFileReference section */
 		7F2EDE361696E028007C2F47 /* LZBMKMapViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBMKMapViewDelegate.h; sourceTree = "<group>"; };
 		7F2EDE371696E028007C2F47 /* LZBMKMapViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBMKMapViewDelegate.m; sourceTree = "<group>"; };
-		7F2EDE3A1696E06E007C2F47 /* LZBMKAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZBMKAnnotation.h; sourceTree = "<group>"; };
 		7F2EDE401696E2E7007C2F47 /* CommonData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonData.h; sourceTree = "<group>"; };
 		7F56B14916803C9A00E13581 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
 		7F56B16C1680406100E13581 /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaidumapapi.a; sourceTree = "<group>"; };
@@ -86,6 +86,9 @@
 		7FB8C36C168C5CD200344625 /* p_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p_bg.png; sourceTree = "<group>"; };
 		7FB8C36D168C5CD200344625 /* p_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p_big.png; sourceTree = "<group>"; };
 		7FB8C36E168C5CD200344625 /* p_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p_small.png; sourceTree = "<group>"; };
+		7FE87A5F1697BBB5009C7574 /* LZBMKAnnotationViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZBMKAnnotationViewProtocol.h; sourceTree = "<group>"; };
+		7FE87A601697C308009C7574 /* LZAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAnnotationView.h; sourceTree = "<group>"; };
+		7FE87A611697C309009C7574 /* LZAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAnnotationView.m; sourceTree = "<group>"; };
 		8B822B6714DE77EA008A70A3 /* BaiduMapSW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiduMapSW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B822B6B14DE77EA008A70A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8B822B6D14DE77EA008A70A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -173,9 +176,11 @@
 				7FB8C368168C591C00344625 /* Sip2Annotation.m */,
 				7F6DBE15168EE80F00415BB9 /* AnnotationView.h */,
 				7F6DBE16168EE80F00415BB9 /* AnnotationView.m */,
+				7FE87A601697C308009C7574 /* LZAnnotationView.h */,
+				7FE87A611697C309009C7574 /* LZAnnotationView.m */,
 				7F2EDE361696E028007C2F47 /* LZBMKMapViewDelegate.h */,
 				7F2EDE371696E028007C2F47 /* LZBMKMapViewDelegate.m */,
-				7F2EDE3A1696E06E007C2F47 /* LZBMKAnnotation.h */,
+				7FE87A5F1697BBB5009C7574 /* LZBMKAnnotationViewProtocol.h */,
 			);
 			path = Sip2Annotation;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 				7FB8C369168C591C00344625 /* Sip2Annotation.m in Sources */,
 				7F6DBE17168EE80F00415BB9 /* AnnotationView.m in Sources */,
 				7F2EDE381696E028007C2F47 /* LZBMKMapViewDelegate.m in Sources */,
+				7FE87A621697C309009C7574 /* LZAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
