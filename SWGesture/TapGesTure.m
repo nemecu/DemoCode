@@ -80,6 +80,7 @@
 }
 
 - (IBAction)actionTap:(id)sender {
+    NSLog(@"SW -class %@",NSStringFromClass([sender class]));
     CGPoint pp = [tapGestrue locationInView:self.view];
     NSLog(@"actionTap:%f,%f\n",pp.x,pp.y);
     CGPoint location = [self.tapGestrue locationInView:self.view];
